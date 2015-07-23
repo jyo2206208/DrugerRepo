@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         //初始化数据库
-        self.initMyDataBase()
+        GlobalConst.initDB();
         return true
     }
 
@@ -40,15 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-    func initMyDataBase(){
-        Camembert.initDataBase("db.sqlite")
-        //初始化用户信息
-        USER(id:1).push()
-        //初始化制毒工厂信息
-        DRUG_FACTORY(id: 1, NAME: "房车", PRICE: 2000, WORKER_NAME: "制毒的瘾君子", WORKER_PRICE:500, WORKER_SPEED: 1, WORKER_MAX: 5, DESCRIBE: "可雇佣5个制毒的瘾君子的房车，简陋又没效率，但是聊胜于无。")
-        DRUG_FACTORY(id: 1, NAME: "房子", PRICE: 100000, WORKER_NAME: "化学系学生", WORKER_PRICE:5000, WORKER_SPEED: 5, WORKER_MAX: 10, DESCRIBE: "学生妹清纯可爱又能干，真的不错哟。")
     }
 
 }

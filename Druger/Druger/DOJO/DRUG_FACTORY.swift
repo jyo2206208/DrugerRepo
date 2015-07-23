@@ -32,7 +32,7 @@ class DRUG_FACTORY: CamembertModel {
         super.init(id: id)
     }
     
-    init(id:Int,NAME:String,PRICE:Int64,WORKER_NAME:String,WORKER_PRICE:Int64,WORKER_SPEED:Int64,WORKER_MAX:Int64,DESCRIBE:TEXT) {
+    init(id:Int, NAME:String, PRICE:Int64, WORKER_NAME:String, WORKER_PRICE:Int64, WORKER_SPEED:Int64, WORKER_MAX:Int64, DESCRIBE:TEXT) {
         super.init(id: id)
         self.NAME = NAME
         self.PRICE = PRICE
