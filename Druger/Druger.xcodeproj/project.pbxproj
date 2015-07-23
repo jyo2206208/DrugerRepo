@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE0667851B4F979900D6EF7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0667841B4F979900D6EF7D /* AppDelegate.swift */; };
+		CE06678A1B4F979900D6EF7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0667881B4F979900D6EF7D /* Main.storyboard */; };
+		CE06678F1B4F979900D6EF7D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE06678D1B4F979900D6EF7D /* LaunchScreen.xib */; };
+		CE06679B1B4F979900D6EF7D /* DrugerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06679A1B4F979900D6EF7D /* DrugerTests.swift */; };
+		CE0667A51B4F9E6000D6EF7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0667A41B4F9E6000D6EF7D /* Images.xcassets */; };
+		CE0667AA1B4FA04B00D6EF7D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0667A91B4FA04B00D6EF7D /* BaseViewController.swift */; };
+		CE0667B91B4FA5B800D6EF7D /* AchievementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0667B41B4FA5B800D6EF7D /* AchievementViewController.swift */; };
+		CE0667BA1B4FA5B800D6EF7D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0667B61B4FA5B800D6EF7D /* HomeViewController.swift */; };
+		CE0667BB1B4FA5B800D6EF7D /* LevelUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0667B81B4FA5B800D6EF7D /* LevelUpViewController.swift */; };
+		CE0668A91B51914700D6EF7D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0668A81B51914700D6EF7D /* libsqlite3.dylib */; };
+		CEC55ECC1B5633A50059AD0E /* DRUG_FACTORY.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC55ECB1B5633A50059AD0E /* DRUG_FACTORY.swift */; };
+		CEDF62A71B58291A004E2F5A /* DrugFactoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF62A51B58291A004E2F5A /* DrugFactoryTableViewCell.swift */; };
+		CEDF62A81B58291A004E2F5A /* DrugFactoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDF62A61B58291A004E2F5A /* DrugFactoryTableViewCell.xib */; };
+		CEDF62AB1B582E0E004E2F5A /* WorkerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF62A91B582E0E004E2F5A /* WorkerViewController.swift */; };
+		CEDF62AC1B582E0E004E2F5A /* WorkerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDF62AA1B582E0E004E2F5A /* WorkerViewController.xib */; };
+		CEEC21701B51BCBB006A08B5 /* Camembert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC216C1B51BCBB006A08B5 /* Camembert.swift */; };
+		CEEC21711B51BCBC006A08B5 /* CamembertMisc.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEC216D1B51BCBB006A08B5 /* CamembertMisc.m */; };
+		CEEC21721B51BCBC006A08B5 /* CamembertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC216E1B51BCBB006A08B5 /* CamembertModel.swift */; };
+		CEEC21731B51BCBC006A08B5 /* ExtensionsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC216F1B51BCBB006A08B5 /* ExtensionsClass.swift */; };
+		CEEC217A1B538BA1006A08B5 /* USER.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC21791B538BA1006A08B5 /* USER.swift */; };
+		CEEC217D1B5391B1006A08B5 /* GlobalConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC217C1B5391B1006A08B5 /* GlobalConst.swift */; };
+		CEEC21871B5410CB006A08B5 /* DrugFactoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC21851B5410CB006A08B5 /* DrugFactoryViewController.swift */; };
+		CEEC21881B5410CB006A08B5 /* DrugFactoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEC21861B5410CB006A08B5 /* DrugFactoryViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE0667951B4F979900D6EF7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE0667771B4F979900D6EF7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE06677E1B4F979900D6EF7D;
+			remoteInfo = Druger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE06677F1B4F979900D6EF7D /* Druger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Druger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0667831B4F979900D6EF7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE0667841B4F979900D6EF7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE0667891B4F979900D6EF7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE06678E1B4F979900D6EF7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		CE0667941B4F979900D6EF7D /* DrugerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrugerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0667991B4F979900D6EF7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE06679A1B4F979900D6EF7D /* DrugerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugerTests.swift; sourceTree = "<group>"; };
+		CE0667A41B4F9E6000D6EF7D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CE0667A91B4FA04B00D6EF7D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CE0667B41B4FA5B800D6EF7D /* AchievementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementViewController.swift; sourceTree = "<group>"; };
+		CE0667B61B4FA5B800D6EF7D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CE0667B81B4FA5B800D6EF7D /* LevelUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelUpViewController.swift; sourceTree = "<group>"; };
+		CE0667F61B4FDBF700D6EF7D /* bridging_header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridging_header.h; sourceTree = "<group>"; };
+		CE0668A81B51914700D6EF7D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		CEC55ECB1B5633A50059AD0E /* DRUG_FACTORY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRUG_FACTORY.swift; sourceTree = "<group>"; };
+		CEDF62A51B58291A004E2F5A /* DrugFactoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugFactoryTableViewCell.swift; sourceTree = "<group>"; };
+		CEDF62A61B58291A004E2F5A /* DrugFactoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugFactoryTableViewCell.xib; sourceTree = "<group>"; };
+		CEDF62A91B582E0E004E2F5A /* WorkerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkerViewController.swift; sourceTree = "<group>"; };
+		CEDF62AA1B582E0E004E2F5A /* WorkerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkerViewController.xib; sourceTree = "<group>"; };
+		CEEC216B1B51BCBB006A08B5 /* Camembert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camembert.h; sourceTree = "<group>"; };
+		CEEC216C1B51BCBB006A08B5 /* Camembert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camembert.swift; sourceTree = "<group>"; };
+		CEEC216D1B51BCBB006A08B5 /* CamembertMisc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CamembertMisc.m; sourceTree = "<group>"; };
+		CEEC216E1B51BCBB006A08B5 /* CamembertModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamembertModel.swift; sourceTree = "<group>"; };
+		CEEC216F1B51BCBB006A08B5 /* ExtensionsClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsClass.swift; sourceTree = "<group>"; };
+		CEEC21791B538BA1006A08B5 /* USER.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USER.swift; sourceTree = "<group>"; };
+		CEEC217C1B5391B1006A08B5 /* GlobalConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConst.swift; sourceTree = "<group>"; };
+		CEEC21851B5410CB006A08B5 /* DrugFactoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugFactoryViewController.swift; sourceTree = "<group>"; };
+		CEEC21861B5410CB006A08B5 /* DrugFactoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugFactoryViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE06677C1B4F979900D6EF7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0668A91B51914700D6EF7D /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0667911B4F979900D6EF7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE0667761B4F979900D6EF7D = {
+			isa = PBXGroup;
+			children = (
+				CE0667811B4F979900D6EF7D /* Druger */,
+				CE0667971B4F979900D6EF7D /* DrugerTests */,
+				CE0667801B4F979900D6EF7D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE0667801B4F979900D6EF7D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE06677F1B4F979900D6EF7D /* Druger.app */,
+				CE0667941B4F979900D6EF7D /* DrugerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE0667811B4F979900D6EF7D /* Druger */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC21691B51BCB2006A08B5 /* ThirdParty */,
+				CE0668A71B5190C900D6EF7D /* DOJO */,
+				CE0667BC1B4FA82D00D6EF7D /* frameworks */,
+				CE0667AB1B4FA07500D6EF7D /* Menu */,
+				CE0667A81B4FA04B00D6EF7D /* Base */,
+				CE0667841B4F979900D6EF7D /* AppDelegate.swift */,
+				CE0667881B4F979900D6EF7D /* Main.storyboard */,
+				CE06678D1B4F979900D6EF7D /* LaunchScreen.xib */,
+				CE0667A41B4F9E6000D6EF7D /* Images.xcassets */,
+				CE0667821B4F979900D6EF7D /* Supporting Files */,
+			);
+			path = Druger;
+			sourceTree = "<group>";
+		};
+		CE0667821B4F979900D6EF7D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE0667831B4F979900D6EF7D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE0667971B4F979900D6EF7D /* DrugerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE06679A1B4F979900D6EF7D /* DrugerTests.swift */,
+				CE0667981B4F979900D6EF7D /* Supporting Files */,
+			);
+			path = DrugerTests;
+			sourceTree = "<group>";
+		};
+		CE0667981B4F979900D6EF7D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE0667991B4F979900D6EF7D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE0667A81B4FA04B00D6EF7D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CE0667A91B4FA04B00D6EF7D /* BaseViewController.swift */,
+				CE0667F61B4FDBF700D6EF7D /* bridging_header.h */,
+				CEEC217C1B5391B1006A08B5 /* GlobalConst.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CE0667AB1B4FA07500D6EF7D /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				CE0667B31B4FA5B800D6EF7D /* Achievement */,
+				CE0667B51B4FA5B800D6EF7D /* Home */,
+				CE0667B71B4FA5B800D6EF7D /* LevelUp */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		CE0667B31B4FA5B800D6EF7D /* Achievement */ = {
+			isa = PBXGroup;
+			children = (
+				CE0667B41B4FA5B800D6EF7D /* AchievementViewController.swift */,
+			);
+			path = Achievement;
+			sourceTree = "<group>";
+		};
+		CE0667B51B4FA5B800D6EF7D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CE0667B61B4FA5B800D6EF7D /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CE0667B71B4FA5B800D6EF7D /* LevelUp */ = {
+			isa = PBXGroup;
+			children = (
+				CE0667B81B4FA5B800D6EF7D /* LevelUpViewController.swift */,
+				CEEC21851B5410CB006A08B5 /* DrugFactoryViewController.swift */,
+				CEEC21861B5410CB006A08B5 /* DrugFactoryViewController.xib */,
+				CEDF62A91B582E0E004E2F5A /* WorkerViewController.swift */,
+				CEDF62AA1B582E0E004E2F5A /* WorkerViewController.xib */,
+				CEDF62A51B58291A004E2F5A /* DrugFactoryTableViewCell.swift */,
+				CEDF62A61B58291A004E2F5A /* DrugFactoryTableViewCell.xib */,
+			);
+			path = LevelUp;
+			sourceTree = "<group>";
+		};
+		CE0667BC1B4FA82D00D6EF7D /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE0668A81B51914700D6EF7D /* libsqlite3.dylib */,
+			);
+			path = frameworks;
+			sourceTree = "<group>";
+		};
+		CE0668A71B5190C900D6EF7D /* DOJO */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC21791B538BA1006A08B5 /* USER.swift */,
+				CEC55ECB1B5633A50059AD0E /* DRUG_FACTORY.swift */,
+			);
+			path = DOJO;
+			sourceTree = "<group>";
+		};
+		CEEC21691B51BCB2006A08B5 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC216A1B51BCBB006A08B5 /* Camembert */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		CEEC216A1B51BCBB006A08B5 /* Camembert */ = {
+			isa = PBXGroup;
+			children = (
+				CEEC216B1B51BCBB006A08B5 /* Camembert.h */,
+				CEEC216C1B51BCBB006A08B5 /* Camembert.swift */,
+				CEEC216D1B51BCBB006A08B5 /* CamembertMisc.m */,
+				CEEC216E1B51BCBB006A08B5 /* CamembertModel.swift */,
+				CEEC216F1B51BCBB006A08B5 /* ExtensionsClass.swift */,
+			);
+			path = Camembert;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE06677E1B4F979900D6EF7D /* Druger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE06679E1B4F979900D6EF7D /* Build configuration list for PBXNativeTarget "Druger" */;
+			buildPhases = (
+				CE06677B1B4F979900D6EF7D /* Sources */,
+				CE06677C1B4F979900D6EF7D /* Frameworks */,
+				CE06677D1B4F979900D6EF7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Druger;
+			productName = Druger;
+			productReference = CE06677F1B4F979900D6EF7D /* Druger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE0667931B4F979900D6EF7D /* DrugerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE0667A11B4F979900D6EF7D /* Build configuration list for PBXNativeTarget "DrugerTests" */;
+			buildPhases = (
+				CE0667901B4F979900D6EF7D /* Sources */,
+				CE0667911B4F979900D6EF7D /* Frameworks */,
+				CE0667921B4F979900D6EF7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE0667961B4F979900D6EF7D /* PBXTargetDependency */,
+			);
+			name = DrugerTests;
+			productName = DrugerTests;
+			productReference = CE0667941B4F979900D6EF7D /* DrugerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE0667771B4F979900D6EF7D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "杜闵";
+				TargetAttributes = {
+					CE06677E1B4F979900D6EF7D = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CE0667931B4F979900D6EF7D = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = CE06677E1B4F979900D6EF7D;
+					};
+				};
+			};
+			buildConfigurationList = CE06677A1B4F979900D6EF7D /* Build configuration list for PBXProject "Druger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE0667761B4F979900D6EF7D;
+			productRefGroup = CE0667801B4F979900D6EF7D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE06677E1B4F979900D6EF7D /* Druger */,
+				CE0667931B4F979900D6EF7D /* DrugerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE06677D1B4F979900D6EF7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0667A51B4F9E6000D6EF7D /* Images.xcassets in Resources */,
+				CEDF62A81B58291A004E2F5A /* DrugFactoryTableViewCell.xib in Resources */,
+				CE06678A1B4F979900D6EF7D /* Main.storyboard in Resources */,
+				CE06678F1B4F979900D6EF7D /* LaunchScreen.xib in Resources */,
+				CEDF62AC1B582E0E004E2F5A /* WorkerViewController.xib in Resources */,
+				CEEC21881B5410CB006A08B5 /* DrugFactoryViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0667921B4F979900D6EF7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE06677B1B4F979900D6EF7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0667851B4F979900D6EF7D /* AppDelegate.swift in Sources */,
+				CE0667AA1B4FA04B00D6EF7D /* BaseViewController.swift in Sources */,
+				CEDF62A71B58291A004E2F5A /* DrugFactoryTableViewCell.swift in Sources */,
+				CEEC21701B51BCBB006A08B5 /* Camembert.swift in Sources */,
+				CEEC21871B5410CB006A08B5 /* DrugFactoryViewController.swift in Sources */,
+				CEEC21731B51BCBC006A08B5 /* ExtensionsClass.swift in Sources */,
+				CE0667B91B4FA5B800D6EF7D /* AchievementViewController.swift in Sources */,
+				CEDF62AB1B582E0E004E2F5A /* WorkerViewController.swift in Sources */,
+				CE0667BA1B4FA5B800D6EF7D /* HomeViewController.swift in Sources */,
+				CEEC21711B51BCBC006A08B5 /* CamembertMisc.m in Sources */,
+				CEEC21721B51BCBC006A08B5 /* CamembertModel.swift in Sources */,
+				CE0667BB1B4FA5B800D6EF7D /* LevelUpViewController.swift in Sources */,
+				CEC55ECC1B5633A50059AD0E /* DRUG_FACTORY.swift in Sources */,
+				CEEC217A1B538BA1006A08B5 /* USER.swift in Sources */,
+				CEEC217D1B5391B1006A08B5 /* GlobalConst.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0667901B4F979900D6EF7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE06679B1B4F979900D6EF7D /* DrugerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE0667961B4F979900D6EF7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE06677E1B4F979900D6EF7D /* Druger */;
+			targetProxy = CE0667951B4F979900D6EF7D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE0667881B4F979900D6EF7D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE0667891B4F979900D6EF7D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE06678D1B4F979900D6EF7D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE06678E1B4F979900D6EF7D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE06679C1B4F979900D6EF7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE06679D1B4F979900D6EF7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE06679F1B4F979900D6EF7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Druger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Druger/Base/bridging_header.h";
+			};
+			name = Debug;
+		};
+		CE0667A01B4F979900D6EF7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Druger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Druger/Base/bridging_header.h";
+			};
+			name = Release;
+		};
+		CE0667A21B4F979900D6EF7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DrugerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Druger.app/Druger";
+			};
+			name = Debug;
+		};
+		CE0667A31B4F979900D6EF7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DrugerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Druger.app/Druger";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE06677A1B4F979900D6EF7D /* Build configuration list for PBXProject "Druger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE06679C1B4F979900D6EF7D /* Debug */,
+				CE06679D1B4F979900D6EF7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE06679E1B4F979900D6EF7D /* Build configuration list for PBXNativeTarget "Druger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE06679F1B4F979900D6EF7D /* Debug */,
+				CE0667A01B4F979900D6EF7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE0667A11B4F979900D6EF7D /* Build configuration list for PBXNativeTarget "DrugerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE0667A21B4F979900D6EF7D /* Debug */,
+				CE0667A31B4F979900D6EF7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE0667771B4F979900D6EF7D /* Project object */;
+}

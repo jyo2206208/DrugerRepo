@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="chT-ow-Upg">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--邪恶之家-->
+        <scene sceneID="MxR-zF-wk1">
+            <objects>
+                <navigationController id="btb-IG-MAR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="邪恶之家" image="spanner" id="wCQ-j4-C6z"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="usJ-15-H3f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UHv-G2-lQz" kind="relationship" relationship="rootViewController" id="0AM-uc-A1h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gg6-BH-2DA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="-409"/>
+        </scene>
+        <!--邪恶之家-->
+        <scene sceneID="rK0-n1-RTK">
+            <objects>
+                <viewController id="UHv-G2-lQz" customClass="HomeViewController" customModule="Druger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dml-X2-MrG"/>
+                        <viewControllerLayoutGuide type="bottom" id="NnF-0H-COg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vSL-tZ-mr1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AO-El-VD4">
+                                <rect key="frame" x="285" y="285" width="30" height="30"/>
+                                <state key="normal" title="制毒">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeDrug:" destination="UHv-G2-lQz" eventType="touchUpInside" id="5kQ-Ws-qGB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4v-Ke-0Ar">
+                                <rect key="frame" x="285" y="345" width="30" height="30"/>
+                                <state key="normal" title="贩毒">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sellDrug:" destination="UHv-G2-lQz" eventType="touchUpInside" id="Yq6-Nv-M2o"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金钱" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUI-rQ-hDL">
+                                <rect key="frame" x="283" y="112.5" width="34" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVa-Dt-jfF">
+                                <rect key="frame" x="16" y="148" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t95-xb-tUE">
+                                <rect key="frame" x="16" y="234" width="568" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="毒品" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qK2-Oj-RDt">
+                                <rect key="frame" x="283" y="199" width="34" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="QVa-Dt-jfF" secondAttribute="trailing" id="AAF-RE-Q9N"/>
+                            <constraint firstItem="C4v-Ke-0Ar" firstAttribute="top" secondItem="9AO-El-VD4" secondAttribute="bottom" constant="30" id="BDh-bM-KFw"/>
+                            <constraint firstItem="QVa-Dt-jfF" firstAttribute="top" secondItem="uUI-rQ-hDL" secondAttribute="bottom" constant="15" id="HaC-hO-507"/>
+                            <constraint firstItem="qK2-Oj-RDt" firstAttribute="top" secondItem="QVa-Dt-jfF" secondAttribute="bottom" constant="30" id="K4y-33-0TB"/>
+                            <constraint firstItem="t95-xb-tUE" firstAttribute="top" secondItem="qK2-Oj-RDt" secondAttribute="bottom" constant="15" id="Ukp-r5-YcP"/>
+                            <constraint firstAttribute="centerX" secondItem="C4v-Ke-0Ar" secondAttribute="centerX" id="Wbe-FE-ocj"/>
+                            <constraint firstAttribute="centerX" secondItem="uUI-rQ-hDL" secondAttribute="centerX" id="ZCo-B0-xfr"/>
+                            <constraint firstAttribute="centerY" secondItem="9AO-El-VD4" secondAttribute="centerY" id="bHL-8A-oHZ"/>
+                            <constraint firstItem="QVa-Dt-jfF" firstAttribute="leading" secondItem="vSL-tZ-mr1" secondAttribute="leadingMargin" id="hnl-yI-nii"/>
+                            <constraint firstAttribute="centerX" secondItem="qK2-Oj-RDt" secondAttribute="centerX" id="i0y-i9-97T"/>
+                            <constraint firstAttribute="centerX" secondItem="t95-xb-tUE" secondAttribute="centerX" id="rUE-SN-aGS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t95-xb-tUE" secondAttribute="trailing" id="rba-od-xoH"/>
+                            <constraint firstItem="t95-xb-tUE" firstAttribute="leading" secondItem="vSL-tZ-mr1" secondAttribute="leadingMargin" id="wwL-wp-QVR"/>
+                            <constraint firstAttribute="centerX" secondItem="9AO-El-VD4" secondAttribute="centerX" id="wwm-r6-veg"/>
+                            <constraint firstItem="9AO-El-VD4" firstAttribute="top" secondItem="t95-xb-tUE" secondAttribute="bottom" constant="30" id="xWb-cq-LAf"/>
+                            <constraint firstAttribute="centerX" secondItem="QVa-Dt-jfF" secondAttribute="centerX" id="yt1-uq-ph8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="邪恶之家" id="Cla-dw-J5l"/>
+                    <connections>
+                        <outlet property="drug_Label" destination="t95-xb-tUE" id="uvU-us-e1Y"/>
+                        <outlet property="money_Label" destination="QVa-Dt-jfF" id="mVG-yo-7MQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OUs-5F-jO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1352" y="-409"/>
+        </scene>
+        <!--变强变大-->
+        <scene sceneID="OvH-gm-cBX">
+            <objects>
+                <navigationController id="cpE-ZF-Jcy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="变强变大" image="warning" id="ZHH-u1-aeB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vbZ-Vv-Xyo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="min-MO-Uu9" kind="relationship" relationship="rootViewController" id="kcz-Ri-j9c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onQ-Ob-zCa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="305"/>
+        </scene>
+        <!--变强变大-->
+        <scene sceneID="n18-RL-KJb">
+            <objects>
+                <viewController id="min-MO-Uu9" customClass="LevelUpViewController" customModule="Druger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tkc-sL-BzN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oat-Zb-dxJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dqe-lS-Fs3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="W2k-L7-h74">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="min-MO-Uu9" id="rKW-jm-fJ0"/>
+                                    <outlet property="delegate" destination="min-MO-Uu9" id="WAw-hB-SUs"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="变强变大" id="WDG-0U-Kyh"/>
+                    <connections>
+                        <outlet property="levelTypesTable" destination="W2k-L7-h74" id="tSu-FE-deE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Dc-yw-lB0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350" y="303"/>
+        </scene>
+        <!--成就中心-->
+        <scene sceneID="Itz-wI-H6u">
+            <objects>
+                <viewController id="3ee-K4-noX" customClass="AchievementViewController" customModule="Druger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7Y-Hi-wBp"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZeH-Pv-7MY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mD8-DU-CGz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="成就中心" id="t6r-Mw-pGL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VrR-3i-GYX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1346" y="1025"/>
+        </scene>
+        <!--成就中心-->
+        <scene sceneID="L15-ND-svP">
+            <objects>
+                <navigationController id="Lzd-kE-kcz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="成就中心" image="auction" id="Evf-m6-aWp"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GgK-kV-prz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3ee-K4-noX" kind="relationship" relationship="rootViewController" id="6Sm-Mh-ceR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAc-R8-OeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="1023"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qBj-H9-ylN">
+            <objects>
+                <tabBarController id="chT-ow-Upg" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ZOA-Lw-KeS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="btb-IG-MAR" kind="relationship" relationship="viewControllers" id="r02-rz-dkv"/>
+                        <segue destination="cpE-ZF-Jcy" kind="relationship" relationship="viewControllers" id="ROL-xG-d4B"/>
+                        <segue destination="Lzd-kE-kcz" kind="relationship" relationship="viewControllers" id="AFu-1K-EWR"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w41-7O-0s5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-158" y="425"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="auction" width="32" height="32"/>
+        <image name="spanner" width="32" height="32"/>
+        <image name="warning" width="32" height="32"/>
+    </resources>
+</document>
