@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         //初始化数据库
-        GlobalConst.initDB();
+        GlobalConst.initDB()
+        NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector:"updateDBinfo", userInfo:nil, repeats:true)
         return true
     }
 
@@ -40,6 +41,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+
+    //全局的用于更新用户数据的方法
+    func updateDBinfo(){
+        var currentDrug = me.DRUG
+        //单位时间的毒品销售量
+        var sellSpeed = getDrugSellSpeed()
+        //单位时间的毒品产量
+        var drugMakeSpeed = getDrugMakeSpeed()
+        var leftDrug = currentDrug + drugMakeSpeed - sellSpeed
+        
+        if (leftDrug >= 0){//如果增速不至于把当前毒品量清空的话
+            me.DRUG = leftDrug
+            me.MONEY = me.MONEY + sellSpeed * me.DRUG_PRICE
+        } else {//如果增速把当前毒品量清空的话
+            me.DRUG = 0
+            me.MONEY = me.MONEY + currentDrug * me.DRUG_PRICE + drugMakeSpeed * me.DRUG_PRICE
+        }
+        //经销商雇佣
+        me.SALES_COUNT = me.SALES_COUNT + me.BUSINESSMAN_COUNT * me.BUSINESSMAN_SPEED
+        me.update()
+    }
+    
+    //获取当前的制毒速度
+    func getDrugMakeSpeed () -> Int64{
+        var speed:Int64 = 0
+        for currentElement in DRUG_FACTORY.select(selectRequest: .SelectAll(.Ascending, ""))! {
+            var element : DRUG_FACTORY = currentElement as! DRUG_FACTORY
+            speed = speed + element.WORKER_COUNT * element.WORKER_SPEED
+        }
+        return speed
+    }
+    
+    //获取当前的销售速度
+    func getDrugSellSpeed () -> Int64{
+        var speed:Int64 = 0
+        speed = me.SALES_COUNT * me.SALES_SPEED
+        return speed
     }
 
 }

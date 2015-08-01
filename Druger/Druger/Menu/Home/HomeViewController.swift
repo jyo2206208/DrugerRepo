@@ -17,29 +17,17 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
 //        me.MONEY = 999999999
 //        me.update()
-        println(Int.max)
+        updateUIInfo()
         
-
-        
-//        me.DRUG_MAKE_SPEED = 1
-//        me.update()
-        
-        //设置全局的一个定时器每0.5秒刷新用户信息
-        NSTimer.scheduledTimerWithTimeInterval(0.5, target:self, selector:"updateUIInfo", userInfo:nil, repeats:true)
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        //页面刚开始的时候显示的数据
-        money_Label.text = String(stringInterpolationSegment: me.MONEY)
-        drug_Label.text = String(stringInterpolationSegment: me.DRUG)
     }
     
     //根据用户的制毒速度实时更新用户的毒品数量信息
+    //来自父类的UI情报更新方法。每0.5s更新一次!必须实现!!!
     func updateUIInfo(){
-        var drug_count : Int64 = (drug_Label.text?.toInt())! + 1//这里需要改成+制毒速度
-        drug_Label.text = String(drug_count)
-        me.DRUG = drug_count
-        me.update()
+        //更新毒品信息
+        drug_Label.text = "\(me.DRUG)"
+        //更新金钱信息
+        money_Label.text = "\(me.MONEY)"
     }
     
     @IBAction func makeDrug(sender: AnyObject) {
@@ -63,5 +51,7 @@ class HomeViewController: BaseViewController {
     }
     
     
+    
+
 
 }

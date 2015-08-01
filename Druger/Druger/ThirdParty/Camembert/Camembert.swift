@@ -69,7 +69,7 @@ class Camembert {
             .DocumentDirectory, .UserDomainMask, true)[0] as! String
         
         let pathDatabase = documentDirectory + "/" + nameDatabase
-        println(pathDatabase)
+//        println(pathDatabase)
         let ret = sqlite3_open(pathDatabase.cStringUsingEncoding(NSUTF8StringEncoding)!,
             &DataAccess.access.dataAccess)
         

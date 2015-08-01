@@ -12,7 +12,8 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //设置全局的一个定时器每1秒刷新用户信息
+        NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector:"updateUIInfo", userInfo:nil, repeats:true)
         // Do any additional setup after loading the view.
     }
 

@@ -20,6 +20,10 @@ class LevelUpViewController: BaseViewController {
         levelTypesTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellID)
         // Do any additional setup after loading the view.
     }
+    
+    //来自父类的UI情报更新方法。每1s更新一次!必须实现!!!
+    func updateUIInfo(){
+    }
 }
 
 extension LevelUpViewController:UITableViewDataSource{
@@ -40,7 +44,7 @@ extension LevelUpViewController:UITableViewDelegate{
         case 0:
             self.navigationController?.pushViewController(DrugFactoryViewController(nibName: "DrugFactoryViewController", bundle: nil), animated: true)
         case 1:
-            "1"
+            self.navigationController?.pushViewController(SalesHomeViewController(nibName:"SalesHomeViewController", bundle: nil), animated: true)
         default:
             "default"
         }

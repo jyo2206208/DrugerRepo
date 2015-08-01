@@ -24,7 +24,7 @@ class DrugFactoryTableViewCell: UITableViewCell {
             factory.COUNT++
             factory.update()
             count_label.text = String(factory.COUNT)
-            delegate.headerLabel.text = "金钱：\(me.MONEY)"
+            delegate.updateUIInfo()
         }
     }
     override func awakeFromNib() {

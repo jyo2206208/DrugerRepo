@@ -17,6 +17,8 @@
 		CE0667BA1B4FA5B800D6EF7D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0667B61B4FA5B800D6EF7D /* HomeViewController.swift */; };
 		CE0667BB1B4FA5B800D6EF7D /* LevelUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0667B81B4FA5B800D6EF7D /* LevelUpViewController.swift */; };
 		CE0668A91B51914700D6EF7D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0668A81B51914700D6EF7D /* libsqlite3.dylib */; };
+		CEAE68871B67B128003720CC /* SalesHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE68851B67B128003720CC /* SalesHomeViewController.swift */; };
+		CEAE68881B67B128003720CC /* SalesHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAE68861B67B128003720CC /* SalesHomeViewController.xib */; };
 		CEC55ECC1B5633A50059AD0E /* DRUG_FACTORY.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC55ECB1B5633A50059AD0E /* DRUG_FACTORY.swift */; };
 		CEDF62A71B58291A004E2F5A /* DrugFactoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF62A51B58291A004E2F5A /* DrugFactoryTableViewCell.swift */; };
 		CEDF62A81B58291A004E2F5A /* DrugFactoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEDF62A61B58291A004E2F5A /* DrugFactoryTableViewCell.xib */; };
@@ -58,6 +60,8 @@
 		CE0667B81B4FA5B800D6EF7D /* LevelUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelUpViewController.swift; sourceTree = "<group>"; };
 		CE0667F61B4FDBF700D6EF7D /* bridging_header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridging_header.h; sourceTree = "<group>"; };
 		CE0668A81B51914700D6EF7D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		CEAE68851B67B128003720CC /* SalesHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesHomeViewController.swift; sourceTree = "<group>"; };
+		CEAE68861B67B128003720CC /* SalesHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SalesHomeViewController.xib; sourceTree = "<group>"; };
 		CEC55ECB1B5633A50059AD0E /* DRUG_FACTORY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRUG_FACTORY.swift; sourceTree = "<group>"; };
 		CEDF62A51B58291A004E2F5A /* DrugFactoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugFactoryTableViewCell.swift; sourceTree = "<group>"; };
 		CEDF62A61B58291A004E2F5A /* DrugFactoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugFactoryTableViewCell.xib; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 				CEDF62AA1B582E0E004E2F5A /* WorkerViewController.xib */,
 				CEDF62A51B58291A004E2F5A /* DrugFactoryTableViewCell.swift */,
 				CEDF62A61B58291A004E2F5A /* DrugFactoryTableViewCell.xib */,
+				CEAE68851B67B128003720CC /* SalesHomeViewController.swift */,
+				CEAE68861B67B128003720CC /* SalesHomeViewController.xib */,
 			);
 			path = LevelUp;
 			sourceTree = "<group>";
@@ -326,6 +332,7 @@
 				CE06678F1B4F979900D6EF7D /* LaunchScreen.xib in Resources */,
 				CEDF62AC1B582E0E004E2F5A /* WorkerViewController.xib in Resources */,
 				CEEC21881B5410CB006A08B5 /* DrugFactoryViewController.xib in Resources */,
+				CEAE68881B67B128003720CC /* SalesHomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +358,7 @@
 				CEEC21731B51BCBC006A08B5 /* ExtensionsClass.swift in Sources */,
 				CE0667B91B4FA5B800D6EF7D /* AchievementViewController.swift in Sources */,
 				CEDF62AB1B582E0E004E2F5A /* WorkerViewController.swift in Sources */,
+				CEAE68871B67B128003720CC /* SalesHomeViewController.swift in Sources */,
 				CE0667BA1B4FA5B800D6EF7D /* HomeViewController.swift in Sources */,
 				CEEC21711B51BCBC006A08B5 /* CamembertMisc.m in Sources */,
 				CEEC21721B51BCBC006A08B5 /* CamembertModel.swift in Sources */,

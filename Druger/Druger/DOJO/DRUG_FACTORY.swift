@@ -23,13 +23,17 @@ class DRUG_FACTORY: CamembertModel {
     var WORKER_SPEED:INTEGER = 0
     //制毒人员人数
     var WORKER_COUNT:INTEGER = 0
-    //制毒人员人数最大值
+    //一个工厂可容纳制毒人员人数
     var WORKER_MAX:INTEGER = 0
     //工厂说明
     var DESCRIBE:TEXT = ""
 
     override init(id:Int){
         super.init(id: id)
+    }
+    
+    override init(){
+        super.init()
     }
     
     init(id:Int, NAME:String, PRICE:Int64, WORKER_NAME:String, WORKER_PRICE:Int64, WORKER_SPEED:Int64, WORKER_MAX:Int64, DESCRIBE:TEXT) {

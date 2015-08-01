@@ -18,18 +18,26 @@ class DrugFactoryViewController: BaseViewController {
         var nib = UINib(nibName: "DrugFactoryTableViewCell", bundle: nil)
         drugFactoryTable.registerNib(UINib(nibName: "DrugFactoryTableViewCell", bundle: nil), forCellReuseIdentifier: cellIDForDrugFactory)
         drugFactoryTable.tableHeaderView = headerLabel
+        updateUIInfo()
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+//    override func viewDidAppear(animated: Bool) {
+//        super.viewDidAppear(animated)
+//        headerLabel.text = "金钱：\(me.MONEY)"
+//    }
+    
+    //来自父类的UI情报更新方法。每0.5s更新一次!必须实现!!!
+    func updateUIInfo(){
         headerLabel.text = "金钱：\(me.MONEY)"
     }
 }
 
 extension DrugFactoryViewController:UITableViewDelegate{
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        self.navigationController?.pushViewController(WorkerViewController(nibName: "WorkerViewController", bundle: nil), animated: true)
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var workerViewController:WorkerViewController = WorkerViewController(nibName: "WorkerViewController", bundle: nil)
+        workerViewController.factory = DRUG_FACTORY(id: indexPath.row + 1)
+        self.navigationController?.pushViewController(workerViewController, animated: true)
     }
 }
 
@@ -42,12 +50,13 @@ extension DrugFactoryViewController:UITableViewDataSource{
         
         
         var cell : DrugFactoryTableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIDForDrugFactory, forIndexPath: indexPath) as! DrugFactoryTableViewCell
-        cell.factory = DRUG_FACTORY(id: indexPath.row + 1)
+        var factory = DRUG_FACTORY(id: indexPath.row + 1)
+        cell.factory = factory
         cell.delegate = self
-        cell.name_label.text = DRUG_FACTORY(id: indexPath.row + 1).NAME
-        cell.count_label.text = String(DRUG_FACTORY(id: indexPath.row + 1).COUNT)
-        cell.describe_label.text = DRUG_FACTORY(id: indexPath.row + 1).DESCRIBE
-        cell.price_label.text = String(DRUG_FACTORY(id: indexPath.row + 1).PRICE)
+        cell.name_label.text = factory.NAME
+        cell.count_label.text = "\(factory.COUNT)"
+        cell.describe_label.text = factory.DESCRIBE
+        cell.price_label.text = "\(factory.PRICE)"
         return cell;
     }
 }
