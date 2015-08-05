@@ -54,10 +54,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if (leftDrug >= 0){//如果增速不至于把当前毒品量清空的话
             me.DRUG = leftDrug
-            me.MONEY = me.MONEY + sellSpeed * me.DRUG_PRICE
+            me.MONEY = me.MONEY + Float(sellSpeed) * me.DRUG_PRICE
         } else {//如果增速把当前毒品量清空的话
             me.DRUG = 0
-            me.MONEY = me.MONEY + currentDrug * me.DRUG_PRICE + drugMakeSpeed * me.DRUG_PRICE
+            me.MONEY = me.MONEY + Float(currentDrug) * me.DRUG_PRICE + Float(drugMakeSpeed) * me.DRUG_PRICE
         }
         //经销商雇佣
         me.SALES_COUNT = me.SALES_COUNT + me.BUSINESSMAN_COUNT * me.BUSINESSMAN_SPEED
@@ -65,19 +65,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     //获取当前的制毒速度
-    func getDrugMakeSpeed () -> Int64{
-        var speed:Int64 = 0
+    func getDrugMakeSpeed () -> Float{
+        var speed:Float = 0
         for currentElement in DRUG_FACTORY.select(selectRequest: .SelectAll(.Ascending, ""))! {
             var element : DRUG_FACTORY = currentElement as! DRUG_FACTORY
-            speed = speed + element.WORKER_COUNT * element.WORKER_SPEED
+            speed = speed + Float(element.WORKER_COUNT * element.WORKER_SPEED)
         }
         return speed
     }
     
     //获取当前的销售速度
-    func getDrugSellSpeed () -> Int64{
-        var speed:Int64 = 0
-        speed = me.SALES_COUNT * me.SALES_SPEED
+    func getDrugSellSpeed () -> Float{
+        var speed:Float = 0
+        speed = Float(me.SALES_COUNT * me.SALES_SPEED)
         return speed
     }
 

@@ -25,27 +25,23 @@ class HomeViewController: BaseViewController {
     //来自父类的UI情报更新方法。每0.5s更新一次!必须实现!!!
     func updateUIInfo(){
         //更新毒品信息
-        drug_Label.text = "\(me.DRUG)"
+        drug_Label.text = "\(GlobalConst.showNumbers(me.DRUG))"
         //更新金钱信息
-        money_Label.text = "\(me.MONEY)"
+        money_Label.text = "\(GlobalConst.showNumbers(me.MONEY))"
     }
     
     @IBAction func makeDrug(sender: AnyObject) {
-        var drug_count : Int64 = (drug_Label.text?.toInt())! + 1
-        drug_Label.text = String(drug_count)
-        me.DRUG = drug_count
+        me.DRUG = me.DRUG + 1
+        drug_Label.text = "\(GlobalConst.showNumbers(me.DRUG))"
         me.update()
-        
     }
     
     @IBAction func sellDrug(sender: AnyObject) {
-        if ((drug_Label.text?.toInt())! > 0){
-            var drug_count : Int64 = Int64((drug_Label.text?.toInt())!) - 1
-            var money_count : Int64 = (money_Label.text?.toInt())! + me.DRUG_PRICE
-            drug_Label.text = String(drug_count)
-            money_Label.text = String(money_count)
-            me.DRUG = drug_count
-            me.MONEY = money_count
+        if (me.DRUG > 0){
+            me.DRUG = me.DRUG - 1
+            me.MONEY = me.MONEY + me.DRUG_PRICE
+            drug_Label.text = "\(GlobalConst.showNumbers(me.DRUG))"
+            money_Label.text = "\(GlobalConst.showNumbers(me.MONEY))"
             me.update()
         }
     }

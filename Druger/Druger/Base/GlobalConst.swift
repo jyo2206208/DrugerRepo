@@ -126,7 +126,21 @@ class GlobalConst: NSObject {
     }
     
 
-
+    class func showNumbers(number:Float) -> String{
+        var returnStr:String = "\(number)"
+        if (number > 10000000000000){
+            returnStr = "\(number / 1000000000000)兆"
+        } else if (number > 1000000000){
+            returnStr = "\(number / 100000000)亿"
+        } else if (number > 100000) {
+            returnStr = "\(number / 10000)万"
+        } else {
+            
+        }
+        
+        
+        return returnStr
+    }
     
     
     

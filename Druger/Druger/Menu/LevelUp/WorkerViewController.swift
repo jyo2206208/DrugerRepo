@@ -19,7 +19,7 @@ class WorkerViewController: BaseViewController {
     @IBAction func buyOne(sender: AnyObject) {
         var currentWorkerCount:Int64 = factory.WORKER_COUNT
         var maxCount:Int64 = factory.COUNT * factory.WORKER_MAX
-        var moneyAfterCost:Int64 = me.MONEY - factory.WORKER_PRICE
+        var moneyAfterCost:Float = me.MONEY - factory.WORKER_PRICE
         if(moneyAfterCost >= 0 && currentWorkerCount < maxCount){
             factory.WORKER_COUNT = currentWorkerCount + 1
             factory.update()
@@ -32,7 +32,7 @@ class WorkerViewController: BaseViewController {
     @IBAction func buyAll(sender: AnyObject) {
         var currentWorkerCount:Int64 = factory.WORKER_COUNT
         var maxCount:Int64 = factory.COUNT * factory.WORKER_MAX
-        var moneyAfterCost:Int64 = me.MONEY - (maxCount - currentWorkerCount) * factory.WORKER_PRICE
+        var moneyAfterCost:Float = me.MONEY - Float((maxCount - currentWorkerCount)) * factory.WORKER_PRICE
         if(moneyAfterCost >= 0 && currentWorkerCount < maxCount){
             factory.WORKER_COUNT = maxCount
             factory.update()
@@ -64,7 +64,7 @@ class WorkerViewController: BaseViewController {
             workerCount = count
         }
         
-        var moneyAfterCost:Int64 = me.MONEY - workerCount * factory.WORKER_PRICE
+        var moneyAfterCost:Float = me.MONEY - Float(workerCount) * factory.WORKER_PRICE
         if(moneyAfterCost >= 0 && currentWorkerCount < maxCount){
             factory.WORKER_COUNT = currentWorkerCount + workerCount
             factory.update()
@@ -76,7 +76,7 @@ class WorkerViewController: BaseViewController {
     
     //来自父类的UI情报更新方法。每0.5s更新一次!必须实现!!!
     func updateUIInfo(){
-        money_label.text = "\(me.MONEY)"
+        money_label.text = "\(GlobalConst.showNumbers(me.MONEY))"
         count_label.text = "\(factory.WORKER_COUNT)"
     }
     

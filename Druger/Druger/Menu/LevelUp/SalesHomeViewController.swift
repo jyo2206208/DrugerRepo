@@ -39,7 +39,7 @@ class SalesHomeViewController: BaseViewController {
 
     //来自父类的UI情报更新方法。每秒更新一次!必须实现!!!
     func updateUIInfo(){
-        money_label.text = "\(me.MONEY)"
+        money_label.text = "\(GlobalConst.showNumbers(me.MONEY))"
         sale_label.text = "\(me.SALES_COUNT)"
         saleHireSpeed_label.text = "\(me.BUSINESSMAN_COUNT * me.BUSINESSMAN_SPEED)"
     }
