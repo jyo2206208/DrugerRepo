@@ -22,11 +22,6 @@ class DrugFactoryViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
-//    override func viewDidAppear(animated: Bool) {
-//        super.viewDidAppear(animated)
-//        headerLabel.text = "金钱：\(me.MONEY)"
-//    }
-    
     //来自父类的UI情报更新方法。每0.5s更新一次!必须实现!!!
     func updateUIInfo(){
         headerLabel.text = "金钱：\(GlobalConst.showNumbers(me.MONEY))"

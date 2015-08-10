@@ -12,18 +12,24 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var globalTimer:NSTimer?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         //初始化数据库
         GlobalConst.initDB()
-        NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector:"updateDBinfo", userInfo:nil, repeats:true)
+        //初始化全局计时器
+        if (globalTimer == nil){
+            globalTimer =  NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector:"updateDBinfo", userInfo:nil, repeats:true)
+        }
         return true
     }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+        //当程序状态从active变化时暂停定时器，更新用户信息
+        globalTimer?.fireDate = NSDate.distantFuture() as! NSDate
+        me.update()
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
@@ -37,6 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        //当程序状态从其他变化为active时继续开启定时器。
+        globalTimer?.fireDate = NSDate.distantPast() as! NSDate
     }
 
     func applicationWillTerminate(application: UIApplication) {
@@ -61,7 +69,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         //经销商雇佣
         me.SALES_COUNT = me.SALES_COUNT + me.BUSINESSMAN_COUNT * me.BUSINESSMAN_SPEED
-        me.update()
     }
     
     //获取当前的制毒速度
