@@ -21,7 +21,6 @@ class LevelUpViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
-    //来自父类的UI情报更新方法。每1s更新一次!必须实现!!!
     func updateUIInfo(){
     }
 }

@@ -76,7 +76,7 @@ class WorkerViewController: BaseViewController {
     
     //来自父类的UI情报更新方法。每0.5s更新一次!必须实现!!!
     func updateUIInfo(){
-        money_label.text = "\(GlobalConst.showNumbers(me.MONEY))"
+        money_label.text = "\(showFormatNumbers(me.MONEY))"
         count_label.text = "\(factory.WORKER_COUNT)"
     }
     

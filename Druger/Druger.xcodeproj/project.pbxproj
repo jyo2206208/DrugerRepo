@@ -8,14 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		CE0667851B4F979900D6EF7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0667841B4F979900D6EF7D /* AppDelegate.swift */; };
-		CE06678A1B4F979900D6EF7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0667881B4F979900D6EF7D /* Main.storyboard */; };
 		CE06678F1B4F979900D6EF7D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE06678D1B4F979900D6EF7D /* LaunchScreen.xib */; };
 		CE06679B1B4F979900D6EF7D /* DrugerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06679A1B4F979900D6EF7D /* DrugerTests.swift */; };
 		CE0667A51B4F9E6000D6EF7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0667A41B4F9E6000D6EF7D /* Images.xcassets */; };
 		CE0667AA1B4FA04B00D6EF7D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0667A91B4FA04B00D6EF7D /* BaseViewController.swift */; };
 		CE0667B91B4FA5B800D6EF7D /* AchievementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0667B41B4FA5B800D6EF7D /* AchievementViewController.swift */; };
-		CE0667BA1B4FA5B800D6EF7D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0667B61B4FA5B800D6EF7D /* HomeViewController.swift */; };
-		CE0667BB1B4FA5B800D6EF7D /* LevelUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0667B81B4FA5B800D6EF7D /* LevelUpViewController.swift */; };
 		CE0668A91B51914700D6EF7D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE0668A81B51914700D6EF7D /* libsqlite3.dylib */; };
 		CEAE68871B67B128003720CC /* SalesHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAE68851B67B128003720CC /* SalesHomeViewController.swift */; };
 		CEAE68881B67B128003720CC /* SalesHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAE68861B67B128003720CC /* SalesHomeViewController.xib */; };
@@ -32,6 +29,10 @@
 		CEEC217D1B5391B1006A08B5 /* GlobalConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC217C1B5391B1006A08B5 /* GlobalConst.swift */; };
 		CEEC21871B5410CB006A08B5 /* DrugFactoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEC21851B5410CB006A08B5 /* DrugFactoryViewController.swift */; };
 		CEEC21881B5410CB006A08B5 /* DrugFactoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEEC21861B5410CB006A08B5 /* DrugFactoryViewController.xib */; };
+		E3A7AB361B7A47DE005867EB /* LevelUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A7AB341B7A47DE005867EB /* LevelUpViewController.swift */; };
+		E3A7AB371B7A47DE005867EB /* LevelUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3A7AB351B7A47DE005867EB /* LevelUpViewController.xib */; };
+		E3A7AB3B1B7A58EA005867EB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A7AB391B7A58EA005867EB /* HomeViewController.swift */; };
+		E3A7AB3C1B7A58EA005867EB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3A7AB3A1B7A58EA005867EB /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +49,6 @@
 		CE06677F1B4F979900D6EF7D /* Druger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Druger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0667831B4F979900D6EF7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE0667841B4F979900D6EF7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE0667891B4F979900D6EF7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE06678E1B4F979900D6EF7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CE0667941B4F979900D6EF7D /* DrugerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrugerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0667991B4F979900D6EF7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,8 +56,6 @@
 		CE0667A41B4F9E6000D6EF7D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CE0667A91B4FA04B00D6EF7D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CE0667B41B4FA5B800D6EF7D /* AchievementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AchievementViewController.swift; sourceTree = "<group>"; };
-		CE0667B61B4FA5B800D6EF7D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		CE0667B81B4FA5B800D6EF7D /* LevelUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelUpViewController.swift; sourceTree = "<group>"; };
 		CE0667F61B4FDBF700D6EF7D /* bridging_header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridging_header.h; sourceTree = "<group>"; };
 		CE0668A81B51914700D6EF7D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CEAE68851B67B128003720CC /* SalesHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalesHomeViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +74,10 @@
 		CEEC217C1B5391B1006A08B5 /* GlobalConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConst.swift; sourceTree = "<group>"; };
 		CEEC21851B5410CB006A08B5 /* DrugFactoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugFactoryViewController.swift; sourceTree = "<group>"; };
 		CEEC21861B5410CB006A08B5 /* DrugFactoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrugFactoryViewController.xib; sourceTree = "<group>"; };
+		E3A7AB341B7A47DE005867EB /* LevelUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelUpViewController.swift; sourceTree = "<group>"; };
+		E3A7AB351B7A47DE005867EB /* LevelUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelUpViewController.xib; sourceTree = "<group>"; };
+		E3A7AB391B7A58EA005867EB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E3A7AB3A1B7A58EA005867EB /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +126,6 @@
 				CE0667AB1B4FA07500D6EF7D /* Menu */,
 				CE0667A81B4FA04B00D6EF7D /* Base */,
 				CE0667841B4F979900D6EF7D /* AppDelegate.swift */,
-				CE0667881B4F979900D6EF7D /* Main.storyboard */,
 				CE06678D1B4F979900D6EF7D /* LaunchScreen.xib */,
 				CE0667A41B4F9E6000D6EF7D /* Images.xcassets */,
 				CE0667821B4F979900D6EF7D /* Supporting Files */,
@@ -170,8 +171,8 @@
 		CE0667AB1B4FA07500D6EF7D /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				E3A7AB381B7A58D8005867EB /* Home */,
 				CE0667B31B4FA5B800D6EF7D /* Achievement */,
-				CE0667B51B4FA5B800D6EF7D /* Home */,
 				CE0667B71B4FA5B800D6EF7D /* LevelUp */,
 			);
 			path = Menu;
@@ -185,18 +186,9 @@
 			path = Achievement;
 			sourceTree = "<group>";
 		};
-		CE0667B51B4FA5B800D6EF7D /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				CE0667B61B4FA5B800D6EF7D /* HomeViewController.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		CE0667B71B4FA5B800D6EF7D /* LevelUp */ = {
 			isa = PBXGroup;
 			children = (
-				CE0667B81B4FA5B800D6EF7D /* LevelUpViewController.swift */,
 				CEEC21851B5410CB006A08B5 /* DrugFactoryViewController.swift */,
 				CEEC21861B5410CB006A08B5 /* DrugFactoryViewController.xib */,
 				CEDF62A91B582E0E004E2F5A /* WorkerViewController.swift */,
@@ -205,6 +197,8 @@
 				CEDF62A61B58291A004E2F5A /* DrugFactoryTableViewCell.xib */,
 				CEAE68851B67B128003720CC /* SalesHomeViewController.swift */,
 				CEAE68861B67B128003720CC /* SalesHomeViewController.xib */,
+				E3A7AB341B7A47DE005867EB /* LevelUpViewController.swift */,
+				E3A7AB351B7A47DE005867EB /* LevelUpViewController.xib */,
 			);
 			path = LevelUp;
 			sourceTree = "<group>";
@@ -244,6 +238,15 @@
 				CEEC216F1B51BCBB006A08B5 /* ExtensionsClass.swift */,
 			);
 			path = Camembert;
+			sourceTree = "<group>";
+		};
+		E3A7AB381B7A58D8005867EB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E3A7AB391B7A58EA005867EB /* HomeViewController.swift */,
+				E3A7AB3A1B7A58EA005867EB /* HomeViewController.xib */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,13 +330,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A7AB371B7A47DE005867EB /* LevelUpViewController.xib in Resources */,
 				CE0667A51B4F9E6000D6EF7D /* Images.xcassets in Resources */,
 				CEDF62A81B58291A004E2F5A /* DrugFactoryTableViewCell.xib in Resources */,
-				CE06678A1B4F979900D6EF7D /* Main.storyboard in Resources */,
 				CE06678F1B4F979900D6EF7D /* LaunchScreen.xib in Resources */,
 				CEDF62AC1B582E0E004E2F5A /* WorkerViewController.xib in Resources */,
 				CEEC21881B5410CB006A08B5 /* DrugFactoryViewController.xib in Resources */,
 				CEAE68881B67B128003720CC /* SalesHomeViewController.xib in Resources */,
+				E3A7AB3C1B7A58EA005867EB /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +357,7 @@
 			files = (
 				CE0667851B4F979900D6EF7D /* AppDelegate.swift in Sources */,
 				CE0667AA1B4FA04B00D6EF7D /* BaseViewController.swift in Sources */,
+				E3A7AB361B7A47DE005867EB /* LevelUpViewController.swift in Sources */,
 				CEDF62A71B58291A004E2F5A /* DrugFactoryTableViewCell.swift in Sources */,
 				CEEC21701B51BCBB006A08B5 /* Camembert.swift in Sources */,
 				CEEC21871B5410CB006A08B5 /* DrugFactoryViewController.swift in Sources */,
@@ -360,10 +365,9 @@
 				CE0667B91B4FA5B800D6EF7D /* AchievementViewController.swift in Sources */,
 				CEDF62AB1B582E0E004E2F5A /* WorkerViewController.swift in Sources */,
 				CEAE68871B67B128003720CC /* SalesHomeViewController.swift in Sources */,
-				CE0667BA1B4FA5B800D6EF7D /* HomeViewController.swift in Sources */,
 				CEEC21711B51BCBC006A08B5 /* CamembertMisc.m in Sources */,
+				E3A7AB3B1B7A58EA005867EB /* HomeViewController.swift in Sources */,
 				CEEC21721B51BCBC006A08B5 /* CamembertModel.swift in Sources */,
-				CE0667BB1B4FA5B800D6EF7D /* LevelUpViewController.swift in Sources */,
 				CEC55ECC1B5633A50059AD0E /* DRUG_FACTORY.swift in Sources */,
 				CEEC217A1B538BA1006A08B5 /* USER.swift in Sources */,
 				CEEC217D1B5391B1006A08B5 /* GlobalConst.swift in Sources */,
@@ -389,14 +393,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CE0667881B4F979900D6EF7D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE0667891B4F979900D6EF7D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE06678D1B4F979900D6EF7D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

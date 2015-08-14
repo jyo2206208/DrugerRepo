@@ -9,45 +9,37 @@
 import UIKit
 
 class HomeViewController: BaseViewController {
-
-    @IBOutlet weak var money_Label: UILabel!
-    @IBOutlet weak var drug_Label: UILabel!
+    
+    @IBOutlet weak var moneyLabel: UILabel!
+    @IBOutlet weak var drugLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        me.MONEY = 999999999
-//        me.update()
+        //        me.MONEY = 999999999
+        //        me.update()
         updateUIInfo()
-        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateUIInfo", name: "updateUINotification", object: nil)
     }
     
-    //根据用户的制毒速度实时更新用户的毒品数量信息
-    //来自父类的UI情报更新方法。每0.5s更新一次!必须实现!!!
+    //根据用户的制毒速度更新用户的毒品数量信息
     func updateUIInfo(){
         //更新毒品信息
-        drug_Label.text = "\(GlobalConst.showNumbers(me.DRUG))"
+        drugLabel.text = "\(showFormatNumbers(me.DRUG))"
         //更新金钱信息
-        money_Label.text = "\(GlobalConst.showNumbers(me.MONEY))"
+        moneyLabel.text = "\(showFormatNumbers(me.MONEY))"
     }
     
     @IBAction func makeDrug(sender: AnyObject) {
         me.DRUG = me.DRUG + 1
-        drug_Label.text = "\(GlobalConst.showNumbers(me.DRUG))"
-        me.update()
+        drugLabel.text = "\(showFormatNumbers(me.DRUG))"
     }
     
     @IBAction func sellDrug(sender: AnyObject) {
         if (me.DRUG > 0){
             me.DRUG = me.DRUG - 1
             me.MONEY = me.MONEY + me.DRUG_PRICE
-            drug_Label.text = "\(GlobalConst.showNumbers(me.DRUG))"
-            money_Label.text = "\(GlobalConst.showNumbers(me.MONEY))"
-            me.update()
+            drugLabel.text = "\(showFormatNumbers(me.DRUG))"
+            moneyLabel.text = "\(showFormatNumbers(me.MONEY))"
         }
     }
-    
-    
-    
-
-
 }

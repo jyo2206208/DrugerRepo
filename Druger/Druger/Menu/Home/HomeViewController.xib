@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Druger" customModuleProvider="target">
+            <connections>
+                <outlet property="drugLabel" destination="5t2-2g-Ki3" id="eqd-cn-7jd"/>
+                <outlet property="moneyLabel" destination="rV5-ET-U9M" id="h0c-bb-B4I"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5t2-2g-Ki3">
+                    <rect key="frame" x="0.0" y="289" width="600" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.5" id="3tk-Jc-5gQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="毒品" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jG2-ki-3Bh">
+                    <rect key="frame" x="283" y="260" width="34" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rV5-ET-U9M">
+                    <rect key="frame" x="0.0" y="184" width="600" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.5" id="TQ7-3i-SUY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金钱" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nA-4j-FI2">
+                    <rect key="frame" x="283" y="155" width="34" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYx-LD-Yi3">
+                    <rect key="frame" x="285" y="411" width="30" height="30"/>
+                    <state key="normal" title="贩毒">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="sellDrug:" destination="-1" eventType="touchUpInside" id="erZ-7s-vVo"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kN-pu-7tu">
+                    <rect key="frame" x="285" y="356" width="30" height="30"/>
+                    <state key="normal" title="制毒">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="makeDrug:" destination="-1" eventType="touchUpInside" id="aGF-cA-iWE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="1kN-pu-7tu" firstAttribute="centerX" secondItem="jG2-ki-3Bh" secondAttribute="centerX" id="0Ad-kF-ZST"/>
+                <constraint firstItem="5t2-2g-Ki3" firstAttribute="top" secondItem="jG2-ki-3Bh" secondAttribute="bottom" constant="8.5" id="0ND-ao-6As"/>
+                <constraint firstItem="rV5-ET-U9M" firstAttribute="top" secondItem="2nA-4j-FI2" secondAttribute="bottom" constant="8.5" id="5Oq-L9-Due"/>
+                <constraint firstItem="1kN-pu-7tu" firstAttribute="top" secondItem="5t2-2g-Ki3" secondAttribute="bottom" constant="46.5" id="5vb-C1-pRd"/>
+                <constraint firstAttribute="trailing" secondItem="rV5-ET-U9M" secondAttribute="trailing" id="7Ls-zW-S1T"/>
+                <constraint firstItem="jG2-ki-3Bh" firstAttribute="top" secondItem="rV5-ET-U9M" secondAttribute="bottom" constant="55.5" id="Ajm-C9-Kc0"/>
+                <constraint firstAttribute="centerX" secondItem="5t2-2g-Ki3" secondAttribute="centerX" id="FUO-Uv-Z92"/>
+                <constraint firstItem="5t2-2g-Ki3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Jb7-ya-AHX"/>
+                <constraint firstAttribute="centerY" secondItem="5t2-2g-Ki3" secondAttribute="centerY" id="JlZ-Og-kI5"/>
+                <constraint firstItem="1kN-pu-7tu" firstAttribute="centerX" secondItem="aYx-LD-Yi3" secondAttribute="centerX" id="X1Z-76-oHT"/>
+                <constraint firstItem="1kN-pu-7tu" firstAttribute="centerX" secondItem="2nA-4j-FI2" secondAttribute="centerX" id="dA7-yg-8pu"/>
+                <constraint firstAttribute="trailing" secondItem="5t2-2g-Ki3" secondAttribute="trailing" id="dDp-nC-IPC"/>
+                <constraint firstItem="rV5-ET-U9M" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dui-wT-Y7V"/>
+                <constraint firstItem="1kN-pu-7tu" firstAttribute="centerX" secondItem="rV5-ET-U9M" secondAttribute="centerX" id="f8s-iY-lIZ"/>
+                <constraint firstItem="1kN-pu-7tu" firstAttribute="centerX" secondItem="5t2-2g-Ki3" secondAttribute="centerX" id="v4p-Cy-Q3Z"/>
+                <constraint firstItem="aYx-LD-Yi3" firstAttribute="top" secondItem="1kN-pu-7tu" secondAttribute="bottom" constant="25" id="ySm-IW-4PB"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

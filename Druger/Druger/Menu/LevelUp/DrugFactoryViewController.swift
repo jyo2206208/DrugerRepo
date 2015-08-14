@@ -24,7 +24,7 @@ class DrugFactoryViewController: BaseViewController {
     
     //来自父类的UI情报更新方法。每0.5s更新一次!必须实现!!!
     func updateUIInfo(){
-        headerLabel.text = "金钱：\(GlobalConst.showNumbers(me.MONEY))"
+        headerLabel.text = "金钱：\(showFormatNumbers(me.MONEY))"
     }
 }
 
@@ -51,7 +51,7 @@ extension DrugFactoryViewController:UITableViewDataSource{
         cell.name_label.text = factory.NAME
         cell.count_label.text = "\(factory.COUNT)"
         cell.describe_label.text = factory.DESCRIBE
-        cell.price_label.text = "\(GlobalConst.showNumbers(factory.PRICE))"
+        cell.price_label.text = "\(showFormatNumbers(factory.PRICE))"
         return cell;
     }
 }

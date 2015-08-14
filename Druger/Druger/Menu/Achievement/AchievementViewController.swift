@@ -11,6 +11,7 @@ import UIKit
 class AchievementViewController: BaseViewController {
 
     override func viewDidLoad() {
+        self.navigationItem.title = "成就中心"
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

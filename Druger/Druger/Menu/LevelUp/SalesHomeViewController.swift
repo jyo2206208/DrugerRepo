@@ -16,6 +16,7 @@ class SalesHomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUIInfo()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateUIInfo", name: "updateUINotification", object: nil)
         // Do any additional setup after loading the view.
     }
     
@@ -37,9 +38,8 @@ class SalesHomeViewController: BaseViewController {
         }
     }
 
-    //来自父类的UI情报更新方法。每秒更新一次!必须实现!!!
     func updateUIInfo(){
-        money_label.text = "\(GlobalConst.showNumbers(me.MONEY))"
+        money_label.text = "\(showFormatNumbers(me.MONEY))"
         sale_label.text = "\(me.SALES_COUNT)"
         saleHireSpeed_label.text = "\(me.BUSINESSMAN_COUNT * me.BUSINESSMAN_SPEED)"
     }

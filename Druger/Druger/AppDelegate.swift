@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegate {
 
     var window: UIWindow?
     var globalTimer:NSTimer?
@@ -19,8 +19,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GlobalConst.initDB()
         //初始化全局计时器
         if (globalTimer == nil){
-            globalTimer =  NSTimer.scheduledTimerWithTimeInterval(1, target:self, selector:"updateDBinfo", userInfo:nil, repeats:true)
+            globalTimer =  NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector:"updateDBinfo", userInfo:nil, repeats:true)
         }
+        
+        var homeViewController:HomeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        homeViewController.title = "邪恶之家"
+        homeViewController.tabBarItem.image = UIImage(named: "alarm_check")
+        var levelUpViewController:LevelUpViewController = LevelUpViewController(nibName: "LevelUpViewController", bundle: nil)
+        levelUpViewController.title = "变强变大"
+        levelUpViewController.tabBarItem.image = UIImage(named: "alarm_check")
+        var achievementViewController:AchievementViewController = AchievementViewController()
+        achievementViewController.title = "成就中心"
+        achievementViewController.tabBarItem.image = UIImage(named: "alarm_check")
+        
+        var mainTabController:UITabBarController = UITabBarController()
+        mainTabController.viewControllers = [homeViewController,levelUpViewController,achievementViewController]
+        mainTabController.delegate = self
+        mainTabController.navigationItem.title = homeViewController.title
+        //解决navigationview挡住下面的view的问题
+        mainTabController.edgesForExtendedLayout = UIRectEdge.None
+        
+        var nav:UINavigationController = UINavigationController(rootViewController: mainTabController)
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.backgroundColor = UIColor.whiteColor()
+        self.window!.makeKeyAndVisible()
+        self.window?.rootViewController = nav
+        
         return true
     }
 
@@ -69,6 +94,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         //经销商雇佣
         me.SALES_COUNT = me.SALES_COUNT + me.BUSINESSMAN_COUNT * me.BUSINESSMAN_SPEED
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("updateUINotification", object: nil)
     }
     
     //获取当前的制毒速度
@@ -88,5 +115,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return speed
     }
 
+}
+
+extension AppDelegate:UITabBarControllerDelegate{
+    func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
+        tabBarController.navigationItem.title = viewController.title
+    }
 }
 
