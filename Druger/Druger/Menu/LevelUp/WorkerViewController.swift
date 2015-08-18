@@ -50,7 +50,7 @@ class WorkerViewController: BaseViewController {
         super.viewDidLoad()
         updateUIInfo()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateUIInfo", name: "updateUINotification", object: nil)
-        price_label.text = "\(factory.WORKER_PRICE)"
+        price_label.text = "\(showFormatNumbers(factory.WORKER_PRICE))"
         speed_label.text = "\(factory.WORKER_SPEED)"
         // Do any additional setup after loading the view.
     }
