@@ -37,9 +37,9 @@ class SalesHomeViewController: BaseViewController {
     }
 
     @IBAction func HireAllBusinessMan(sender: AnyObject) {
-        var count = Int(me.MONEY % (Float(me.BUSINESSMAN_COUNT) * me.BUSINESSMAN_PRICE))
+        var count = Int(me.MONEY / me.BUSINESSMAN_PRICE)
         if (count > 0){
-            me.MONEY = me.MONEY - me.BUSINESSMAN_PRICE  * Float(count)
+            me.MONEY = me.MONEY - me.BUSINESSMAN_PRICE * Float(count)
             me.BUSINESSMAN_COUNT = me.BUSINESSMAN_COUNT + count
             updateUIInfo()
         }
