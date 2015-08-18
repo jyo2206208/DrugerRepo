@@ -10,6 +10,7 @@
 
 //初始化用户数据
 var me : USER = USER(id:1)
+var factorys : [DRUG_FACTORY] = [DRUG_FACTORY(id:1),DRUG_FACTORY(id:2),DRUG_FACTORY(id:3),DRUG_FACTORY(id:4),DRUG_FACTORY(id:5),DRUG_FACTORY(id:6),DRUG_FACTORY(id:7),DRUG_FACTORY(id:8),DRUG_FACTORY(id:9)]
 
 //通用的默认cellID
 let cellID : String = "CELLID"
@@ -125,6 +126,10 @@ class GlobalConst: NSObject {
 
     }
     
+    
+    class func initFactorys() {
+        factorys = [DRUG_FACTORY(id:1),DRUG_FACTORY(id:2),DRUG_FACTORY(id:3),DRUG_FACTORY(id:4),DRUG_FACTORY(id:5),DRUG_FACTORY(id:6),DRUG_FACTORY(id:7),DRUG_FACTORY(id:8),DRUG_FACTORY(id:9)]
+    }
 
 
     

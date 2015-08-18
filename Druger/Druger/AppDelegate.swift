@@ -13,7 +13,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
 
     var window: UIWindow?
     var globalTimer:NSTimer?
+    var homeViewController:HomeViewController = {
+        var returnValue:HomeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        returnValue.title = "邪恶之家"
+        returnValue.tabBarItem.image = UIImage(named: "alarm_check")
+        return returnValue
+    }()
+    
+    var levelUpViewController:LevelUpViewController = {
+        var returnValue:LevelUpViewController = LevelUpViewController(nibName: "LevelUpViewController", bundle: nil)
+        returnValue.title = "变强变大"
+        returnValue.tabBarItem.image = UIImage(named: "alarm_check")
+        return returnValue
+    }()
 
+    var achievementViewController:AchievementViewController = {
+        var returnValue:AchievementViewController = AchievementViewController()
+        returnValue.title = "成就中心"
+        returnValue.tabBarItem.image = UIImage(named: "alarm_check")
+        return returnValue
+    }()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         //初始化数据库
         GlobalConst.initDB()
@@ -22,15 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
             globalTimer =  NSTimer.scheduledTimerWithTimeInterval(0.1, target:self, selector:"updateDBinfo", userInfo:nil, repeats:true)
         }
         
-        var homeViewController:HomeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        homeViewController.title = "邪恶之家"
-        homeViewController.tabBarItem.image = UIImage(named: "alarm_check")
-        var levelUpViewController:LevelUpViewController = LevelUpViewController(nibName: "LevelUpViewController", bundle: nil)
-        levelUpViewController.title = "变强变大"
-        levelUpViewController.tabBarItem.image = UIImage(named: "alarm_check")
-        var achievementViewController:AchievementViewController = AchievementViewController()
-        achievementViewController.title = "成就中心"
-        achievementViewController.tabBarItem.image = UIImage(named: "alarm_check")
         
         var mainTabController:UITabBarController = UITabBarController()
         mainTabController.viewControllers = [homeViewController,levelUpViewController,achievementViewController]
@@ -80,7 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     func updateDBinfo(){
         var currentDrug = me.DRUG
         //单位时间的毒品销售量
-        var sellSpeed = getDrugSellSpeed()
+        var sellSpeed = Float(me.SALES_COUNT * me.SALES_SPEED)
         //单位时间的毒品产量
         var drugMakeSpeed = getDrugMakeSpeed()
         var leftDrug = currentDrug + drugMakeSpeed - sellSpeed
@@ -101,17 +112,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     //获取当前的制毒速度
     func getDrugMakeSpeed () -> Float{
         var speed:Float = 0
-        for currentElement in DRUG_FACTORY.select(selectRequest: .SelectAll(.Ascending, ""))! {
-            var element : DRUG_FACTORY = currentElement as! DRUG_FACTORY
-            speed = speed + Float(element.WORKER_COUNT * element.WORKER_SPEED)
+        for factory in factorys {
+            speed = speed + Float(factory.WORKER_COUNT * factory.WORKER_SPEED)
         }
-        return speed
-    }
-    
-    //获取当前的销售速度
-    func getDrugSellSpeed () -> Float{
-        var speed:Float = 0
-        speed = Float(me.SALES_COUNT * me.SALES_SPEED)
         return speed
     }
 

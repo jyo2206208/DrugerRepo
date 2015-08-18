@@ -25,7 +25,6 @@ class SalesHomeViewController: BaseViewController {
             me.MONEY = me.MONEY - me.SALES_PRICE
             me.SALES_COUNT = me.SALES_COUNT + 1
             updateUIInfo()
-            me.update()
         }
     }
     
@@ -34,10 +33,18 @@ class SalesHomeViewController: BaseViewController {
             me.MONEY = me.MONEY - me.BUSINESSMAN_PRICE
             me.BUSINESSMAN_COUNT = me.BUSINESSMAN_COUNT + 1
             updateUIInfo()
-            me.update()
         }
     }
 
+    @IBAction func HireAllBusinessMan(sender: AnyObject) {
+        var count = Int(me.MONEY % (Float(me.BUSINESSMAN_COUNT) * me.BUSINESSMAN_PRICE))
+        if (count > 0){
+            me.MONEY = me.MONEY - me.BUSINESSMAN_PRICE  * Float(count)
+            me.BUSINESSMAN_COUNT = me.BUSINESSMAN_COUNT + count
+            updateUIInfo()
+        }
+        
+    }
     func updateUIInfo(){
         money_label.text = "\(showFormatNumbers(me.MONEY))"
         sale_label.text = "\(me.SALES_COUNT)"

@@ -20,9 +20,9 @@ class DrugFactoryTableViewCell: UITableViewCell {
     @IBAction func buy(sender: AnyObject) {
         if (me.MONEY >= factory.PRICE){
             me.MONEY = me.MONEY - factory.PRICE
-            me.update()
             factory.COUNT++
             factory.update()
+            GlobalConst.initFactorys()
             count_label.text = String(factory.COUNT)
             delegate.updateUIInfo()
         }

@@ -38,7 +38,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金钱" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4D-7I-uTf">
                     <rect key="frame" x="283" y="80" width="34" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CV9-T6-uT1">
@@ -47,13 +47,13 @@
                         <constraint firstAttribute="height" constant="20" id="GRC-Hz-AIU"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经销商人数" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJG-l3-b60">
                     <rect key="frame" x="258" y="145" width="85" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1U-br-JPF">
@@ -62,13 +62,13 @@
                         <constraint firstAttribute="height" constant="20" id="OkA-ph-ysD"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经销商雇佣速度（每秒）" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qoz-yH-VLo">
                     <rect key="frame" x="207" y="211" width="187" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4y-4W-gC6">
@@ -77,13 +77,23 @@
                         <constraint firstAttribute="height" constant="20" id="CCd-zc-XOh"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9i-ee-8RU">
+                    <rect key="frame" x="225" y="361" width="150" height="30"/>
+                    <state key="normal" title="大商人能买几个买几个">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="HireAllBusinessMan:" destination="-1" eventType="touchUpInside" id="AqL-YP-jqL"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="0gF-fI-uQZ" firstAttribute="top" secondItem="0aR-zf-eiC" secondAttribute="bottom" constant="8" id="153-3S-q4p"/>
+                <constraint firstAttribute="centerX" secondItem="Q9i-ee-8RU" secondAttribute="centerX" id="2Xg-hN-gmk"/>
                 <constraint firstItem="0aR-zf-eiC" firstAttribute="top" secondItem="t4y-4W-gC6" secondAttribute="bottom" constant="28.5" id="8hj-xT-sxt"/>
                 <constraint firstAttribute="trailing" secondItem="CV9-T6-uT1" secondAttribute="trailing" id="DDg-Ht-GzX"/>
                 <constraint firstItem="CV9-T6-uT1" firstAttribute="centerX" secondItem="t4y-4W-gC6" secondAttribute="centerX" id="FGO-Hh-Rri"/>
@@ -108,6 +118,7 @@
                 <constraint firstItem="CV9-T6-uT1" firstAttribute="centerX" secondItem="0aR-zf-eiC" secondAttribute="centerX" id="lkI-XG-Coh"/>
                 <constraint firstItem="CV9-T6-uT1" firstAttribute="centerX" secondItem="BJG-l3-b60" secondAttribute="centerX" id="ndE-2U-9cK"/>
                 <constraint firstAttribute="centerX" secondItem="c4D-7I-uTf" secondAttribute="centerX" id="oKJ-t6-4V2"/>
+                <constraint firstItem="Q9i-ee-8RU" firstAttribute="top" secondItem="0gF-fI-uQZ" secondAttribute="bottom" constant="8" id="sF1-qb-Ho0"/>
                 <constraint firstItem="CV9-T6-uT1" firstAttribute="centerX" secondItem="0gF-fI-uQZ" secondAttribute="centerX" id="wlG-b8-PFW"/>
             </constraints>
         </view>

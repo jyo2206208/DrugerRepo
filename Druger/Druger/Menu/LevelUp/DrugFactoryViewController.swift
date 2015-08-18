@@ -19,6 +19,7 @@ class DrugFactoryViewController: BaseViewController {
         drugFactoryTable.registerNib(UINib(nibName: "DrugFactoryTableViewCell", bundle: nil), forCellReuseIdentifier: cellIDForDrugFactory)
         drugFactoryTable.tableHeaderView = headerLabel
         updateUIInfo()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateUIInfo", name: "updateUINotification", object: nil)
         // Do any additional setup after loading the view.
     }
     
@@ -45,7 +46,7 @@ extension DrugFactoryViewController:UITableViewDataSource{
         
         
         var cell : DrugFactoryTableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIDForDrugFactory, forIndexPath: indexPath) as! DrugFactoryTableViewCell
-        var factory = DRUG_FACTORY(id: indexPath.row + 1)
+        var factory = factorys[indexPath.row]
         cell.factory = factory
         cell.delegate = self
         cell.name_label.text = factory.NAME

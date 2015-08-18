@@ -23,8 +23,8 @@ class WorkerViewController: BaseViewController {
         if(moneyAfterCost >= 0 && currentWorkerCount < maxCount){
             factory.WORKER_COUNT = currentWorkerCount + 1
             factory.update()
+            GlobalConst.initFactorys()
             me.MONEY = moneyAfterCost
-            me.update()
         }
         updateUIInfo()
     }
@@ -36,8 +36,8 @@ class WorkerViewController: BaseViewController {
         if(moneyAfterCost >= 0 && currentWorkerCount < maxCount){
             factory.WORKER_COUNT = maxCount
             factory.update()
+            GlobalConst.initFactorys()
             me.MONEY = moneyAfterCost
-            me.update()
         }
         updateUIInfo()
     }
@@ -49,6 +49,7 @@ class WorkerViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUIInfo()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateUIInfo", name: "updateUINotification", object: nil)
         price_label.text = "\(factory.WORKER_PRICE)"
         speed_label.text = "\(factory.WORKER_SPEED)"
         // Do any additional setup after loading the view.
@@ -69,7 +70,6 @@ class WorkerViewController: BaseViewController {
             factory.WORKER_COUNT = currentWorkerCount + workerCount
             factory.update()
             me.MONEY = moneyAfterCost
-            me.update()
         }
         updateUIInfo()
     }
