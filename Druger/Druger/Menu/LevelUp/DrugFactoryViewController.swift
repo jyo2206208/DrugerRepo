@@ -9,6 +9,7 @@
 import UIKit
 
 class DrugFactoryViewController: BaseViewController {
+    var workerViewController:WorkerViewController!
     var headerLabel : UILabel = UILabel(frame:CGRect(x: 0, y: 0, width: 1, height: 40))
     @IBOutlet weak var drugFactoryTable: UITableView!
 
@@ -31,15 +32,14 @@ class DrugFactoryViewController: BaseViewController {
 
 extension DrugFactoryViewController:UITableViewDelegate{
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var workerViewController:WorkerViewController = WorkerViewController(nibName: "WorkerViewController", bundle: nil)
-        workerViewController.factory = DRUG_FACTORY(id: indexPath.row + 1)
+        workerViewController.factory = factorys[indexPath.row]
         self.navigationController?.pushViewController(workerViewController, animated: true)
     }
 }
 
 extension DrugFactoryViewController:UITableViewDataSource{
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DRUG_FACTORY.numberElement()
+        return factorys.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

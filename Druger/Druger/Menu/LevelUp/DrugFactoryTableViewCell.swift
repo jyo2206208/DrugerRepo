@@ -20,11 +20,12 @@ class DrugFactoryTableViewCell: UITableViewCell {
     @IBAction func buy(sender: AnyObject) {
         if (me.MONEY >= factory.PRICE){
             me.MONEY = me.MONEY - factory.PRICE
-            factory.COUNT++
+            factory.COUNT = factory.COUNT + 1
             factory.update()
             GlobalConst.initFactorys()
             count_label.text = String(factory.COUNT)
             delegate.updateUIInfo()
+            delegate.drugFactoryTable.reloadData()
         }
     }
     override func awakeFromNib() {

@@ -15,8 +15,8 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        me.MONEY = 999999999
-        //        me.update()
+//                me.MONEY = 999999999
+//                me.update()
         updateUIInfo()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateUIInfo", name: "updateUINotification", object: nil)
     }

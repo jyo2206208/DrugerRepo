@@ -10,6 +10,9 @@ import UIKit
 
 class LevelUpViewController: BaseViewController {
     
+    var drugFactoryViewController:DrugFactoryViewController!
+    var salesHomeViewController:SalesHomeViewController!
+    
     var levelTypes = ["制毒提升","贩毒提升"]
 
     @IBOutlet weak var levelTypesTable: UITableView!
@@ -41,9 +44,9 @@ extension LevelUpViewController:UITableViewDelegate{
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
         case 0:
-            self.navigationController?.pushViewController(DrugFactoryViewController(nibName: "DrugFactoryViewController", bundle: nil), animated: true)
+            self.navigationController?.pushViewController(drugFactoryViewController, animated: true)
         case 1:
-            self.navigationController?.pushViewController(SalesHomeViewController(nibName:"SalesHomeViewController", bundle: nil), animated: true)
+            self.navigationController?.pushViewController(salesHomeViewController, animated: true)
         default:
             "default"
         }

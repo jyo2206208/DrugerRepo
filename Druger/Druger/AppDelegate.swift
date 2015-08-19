@@ -13,26 +13,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
 
     var window: UIWindow?
     var globalTimer:NSTimer?
+    
     var homeViewController:HomeViewController = {
-        var returnValue:HomeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        returnValue.title = "邪恶之家"
-        returnValue.tabBarItem.image = UIImage(named: "alarm_check")
-        return returnValue
+        var controller:HomeViewController = HomeViewController(nibName: "HomeViewController", bundle: nil)
+        controller.title = "邪恶之家"
+        controller.tabBarItem.image = UIImage(named: "alarm_check")
+        return controller
     }()
     
     var levelUpViewController:LevelUpViewController = {
-        var returnValue:LevelUpViewController = LevelUpViewController(nibName: "LevelUpViewController", bundle: nil)
-        returnValue.title = "变强变大"
-        returnValue.tabBarItem.image = UIImage(named: "alarm_check")
-        return returnValue
+        var controller:LevelUpViewController = LevelUpViewController(nibName: "LevelUpViewController", bundle: nil)
+        controller.title = "变强变大"
+        controller.tabBarItem.image = UIImage(named: "alarm_check")
+        var drugFactoryViewController = DrugFactoryViewController(nibName: "DrugFactoryViewController", bundle: nil)
+        var workerViewController = WorkerViewController(nibName: "WorkerViewController", bundle: nil)
+        drugFactoryViewController.workerViewController = workerViewController
+        workerViewController.drugFactoryViewController = drugFactoryViewController
+        controller.drugFactoryViewController = drugFactoryViewController
+        controller.salesHomeViewController = SalesHomeViewController(nibName: "SalesHomeViewController", bundle: nil)
+        return controller
     }()
 
     var achievementViewController:AchievementViewController = {
-        var returnValue:AchievementViewController = AchievementViewController()
-        returnValue.title = "成就中心"
-        returnValue.tabBarItem.image = UIImage(named: "alarm_check")
-        return returnValue
+        var controller:AchievementViewController = AchievementViewController()
+        controller.title = "成就中心"
+        controller.tabBarItem.image = UIImage(named: "alarm_check")
+        return controller
     }()
+    
+
+
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         //初始化数据库

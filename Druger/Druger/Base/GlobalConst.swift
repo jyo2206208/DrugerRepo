@@ -129,6 +129,7 @@ class GlobalConst: NSObject {
     
     class func initFactorys() {
         factorys = [DRUG_FACTORY(id:1),DRUG_FACTORY(id:2),DRUG_FACTORY(id:3),DRUG_FACTORY(id:4),DRUG_FACTORY(id:5),DRUG_FACTORY(id:6),DRUG_FACTORY(id:7),DRUG_FACTORY(id:8),DRUG_FACTORY(id:9)]
+        var ff = DRUG_FACTORY(id:1)
     }
 
 

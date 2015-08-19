@@ -9,6 +9,7 @@
 import UIKit
 
 class WorkerViewController: BaseViewController {
+    var drugFactoryViewController:DrugFactoryViewController!
     var factory:DRUG_FACTORY!
     
     @IBOutlet weak var money_label: UILabel!
@@ -24,6 +25,7 @@ class WorkerViewController: BaseViewController {
             factory.WORKER_COUNT = currentWorkerCount + 1
             factory.update()
             GlobalConst.initFactorys()
+            drugFactoryViewController.drugFactoryTable.reloadData()
             me.MONEY = moneyAfterCost
         }
         updateUIInfo()
@@ -37,6 +39,7 @@ class WorkerViewController: BaseViewController {
             factory.WORKER_COUNT = maxCount
             factory.update()
             GlobalConst.initFactorys()
+            drugFactoryViewController.drugFactoryTable.reloadData()
             me.MONEY = moneyAfterCost
         }
         updateUIInfo()
@@ -55,24 +58,24 @@ class WorkerViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
 
-    func addWorkers(count:Int64){
-        var currentWorkerCount:Int64 = factory.WORKER_COUNT
-        var workerCount:Int64
-        var maxCount:Int64 = factory.COUNT * factory.WORKER_MAX
-        if (count == 0){
-            workerCount = maxCount - currentWorkerCount
-        } else {
-            workerCount = count
-        }
-        
-        var moneyAfterCost:Float = me.MONEY - Float(workerCount) * factory.WORKER_PRICE
-        if(moneyAfterCost >= 0 && currentWorkerCount < maxCount){
-            factory.WORKER_COUNT = currentWorkerCount + workerCount
-            factory.update()
-            me.MONEY = moneyAfterCost
-        }
-        updateUIInfo()
-    }
+//    func addWorkers(count:Int64){
+//        var currentWorkerCount:Int64 = factory.WORKER_COUNT
+//        var workerCount:Int64
+//        var maxCount:Int64 = factory.COUNT * factory.WORKER_MAX
+//        if (count == 0){
+//            workerCount = maxCount - currentWorkerCount
+//        } else {
+//            workerCount = count
+//        }
+//        
+//        var moneyAfterCost:Float = me.MONEY - Float(workerCount) * factory.WORKER_PRICE
+//        if(moneyAfterCost >= 0 && currentWorkerCount < maxCount){
+//            factory.WORKER_COUNT = currentWorkerCount + workerCount
+//            factory.update()
+//            me.MONEY = moneyAfterCost
+//        }
+//        updateUIInfo()
+//    }
     
     //来自父类的UI情报更新方法。每0.5s更新一次!必须实现!!!
     func updateUIInfo(){
